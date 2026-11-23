@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laptops | Laptop Finder</title>
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="flex min-h-screen flex-col bg-page text-ink">
+  <div id="site-header"></div>
+  <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-8">
+    <h1 class="mb-4 text-3xl font-bold">Laptop catalogue</h1>
+    <section id="filters" class="grid grid-cols-1 gap-3 rounded-xl border border-line bg-card p-4 sm:grid-cols-2 lg:grid-cols-6">
+      <input id="search" type="search" placeholder="Search name or brand" class="field lg:col-span-2" aria-label="Search">
+      <select id="category" class="field" aria-label="Category"><option value="all">All categories</option></select>
+      <input id="maxPrice" type="number" min="0" placeholder="Max price ($)" class="field" aria-label="Maximum price">
+      <select id="minRam" class="field" aria-label="Minimum RAM">
+        <option value="0">Any RAM</option><option value="8">8 GB+</option><option value="16">16 GB+</option><option value="32">32 GB+</option>
+      </select>
+      <select id="sort" class="field" aria-label="Sort">
+        <option value="default">Sort: default</option>
+        <option value="price-asc">Price: low → high</option>
+        <option value="price-desc">Price: high → low</option>
+        <option value="batteryHours-asc">Battery: low → high</option>
+        <option value="batteryHours-desc">Battery: high → low</option>
+        <option value="weightKg-asc">Weight: light → heavy</option>
+        <option value="weightKg-desc">Weight: heavy → light</option>
+      </select>
+    </section>
+    <div class="my-4 flex items-center justify-between">
+      <p id="count" class="text-muted" aria-live="polite"></p>
+      <button id="reset" type="button" class="btn-ghost text-sm">Reset filters</button>
+    </div>
+    <section id="grid" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"></section>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module" src="src/js/laptops.js"></script>
+</body>
+</html>

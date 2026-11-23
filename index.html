@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Laptop Finder</title>
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="flex min-h-screen flex-col bg-page text-ink">
+  <div id="site-header"></div>
+  <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-8">
+    <section class="py-10 text-center">
+      <h1 class="text-3xl font-bold sm:text-5xl">Find the right laptop for your studies</h1>
+      <p class="mx-auto mt-4 max-w-2xl text-muted">Browse, search and filter laptops, save your favorites and compare them side by side.</p>
+      <a href="laptops.html" class="btn-action mt-6">Browse laptops</a>
+    </section>
+    <section id="stats" class="grid grid-cols-2 gap-4 lg:grid-cols-4"></section>
+    <section class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <a href="laptops.html" class="laptop-card"><h2 class="font-bold text-accent">Laptops</h2><p class="text-muted">Search, filter and sort the catalogue.</p></a>
+      <a href="details.html?id=1" class="laptop-card"><h2 class="font-bold text-accent">Details</h2><p class="text-muted">See the full specs of a laptop.</p></a>
+      <a href="favorites.html" class="laptop-card"><h2 class="font-bold text-accent">Favorites</h2><p class="text-muted">Your saved laptops and totals.</p></a>
+      <a href="compare.html" class="laptop-card"><h2 class="font-bold text-accent">Compare</h2><p class="text-muted">Two to four laptops side by side.</p></a>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module" src="src/js/home.js"></script>
+</body>
+</html>

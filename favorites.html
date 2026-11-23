@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorites | Laptop Finder</title>
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="flex min-h-screen flex-col bg-page text-ink">
+  <div id="site-header"></div>
+  <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-8">
+    <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+      <h1 class="text-3xl font-bold">My favorites</h1>
+      <button id="clear" type="button" class="btn-action">Clear all</button>
+    </div>
+    <p id="totals" class="mb-4 text-muted"></p>
+    <section id="grid" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"></section>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module" src="src/js/favorites.js"></script>
+</body>
+</html>
